@@ -2,6 +2,8 @@ import './App.css';
 import Home from './pages/Home';
 import {createBrowserRouter,RouterProvider,Link} from 'react-router-dom'
 import CreatePost from './pages/CreatePost';
+import Post from './pages/Post';
+
 function App() {
 
   const appRouter= createBrowserRouter([
@@ -12,6 +14,10 @@ function App() {
     {
       path:"/createpost",
       element:<CreatePost />
+    },
+    {
+      path:"/posts/:id",
+      element:<Post />
     }
     
 ])
